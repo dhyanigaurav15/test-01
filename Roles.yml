@@ -1,16 +1,9 @@
 -
   hosts: localhost
-  name: Provisioning
-  tasks: 
-    - name: Provision
-      ec2: 
-        region: "us-east-1"
-        assign_public_ip: true
-        count: 3
-        group: AD-SG
-        image: ami-0c278895328cddfdd
-        instance_type: t2.micro
-        key_name: gaurav
-        vpc_subnet_id: subnet-d400cada
-        wait: true
+  name: ec2 task
+  roles:
+ #   - create-ec2
+    - delete-ec2
+  
+  
       
