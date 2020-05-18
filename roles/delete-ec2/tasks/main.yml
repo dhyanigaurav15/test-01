@@ -1,5 +1,6 @@
 -
       name: Terminate instances that were previously launched
       ec2:
+        region: 'us-east-1'
         state: 'absent'
         instance_ids: 'i-0205229d98386a625'
