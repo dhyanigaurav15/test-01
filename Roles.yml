@@ -4,6 +4,7 @@
   tasks: 
     - name: Provision
       ec2: 
+        region: "us-east-1"
         assign_public_ip: true
         count: 3
         group: AD-SG
