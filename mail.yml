@@ -1,17 +1,10 @@
--
-    name: 'Update nameserver entry into resolv.conf file on localhost'
-    hosts: localhost
-    vars:
-        car_model: BMW M3
-        country_name: USA
-        title: Systems Engineer
-    tasks:
-        -
-            name: 'Print my car model'
-            command: 'echo "My car''s model is {{car_model}}"'
-        -
-            name: 'Print my country'
-            command: 'echo "I live in the {{country_name}}"'
-        -
-            name: 'Print my title'
-            command: 'echo "I work as a {{title}}"'
+- name: Provisioning 
+  ec2:
+    key_name: gaurav
+    instance_type: t2.micro
+    image: ami-0c278895328cddfdd
+    wait: yes
+    group: AD-SG
+    count: 3
+    vpc_subnet_id: subnet-d400cada
+    assign_public_ip: yes
