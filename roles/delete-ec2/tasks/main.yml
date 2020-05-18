@@ -4,3 +4,8 @@
         region: 'us-east-1'
        # state: 'absent'
         instance_ids: '{{ ec2.instance_id }}'
+      register: abc
+-      
+      debug:
+            var: abc
+           
