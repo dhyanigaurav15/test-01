@@ -1,11 +1,11 @@
 - name: Provisioning 
   tasks:
-    ec2:
-      key_name: gaurav
-      instance_type: t2.micro
-      image: ami-0c278895328cddfdd
-      wait: yes
-      group: AD-SG
-      count: 3
-      vpc_subnet_id: subnet-d400cada
-      assign_public_ip: yes
+  ec2:
+    key_name: gaurav
+    instance_type: t2.micro
+    image: ami-0c278895328cddfdd
+    wait: yes
+    group: AD-SG
+    count: 3
+    vpc_subnet_id: subnet-d400cada
+    assign_public_ip: yes
